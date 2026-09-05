@@ -70,7 +70,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
-          tags: baitaotao521/traffic_consumer:latest,baitaotao521/traffic_consumer:${{ github.ref_name }}
+          tags: xiaoxiao0738/traffic_consumer:latest,xiaoxiao0738/traffic_consumer:${{ github.ref_name }}
 
   create-release:
     if: startsWith(github.ref, 'refs/tags/v')
