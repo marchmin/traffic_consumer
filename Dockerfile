@@ -1,6 +1,6 @@
 # 使用轻量的Python 3.12 slim镜像
 # FROM python:3.12-slim
-FROM python:3.12.0b1-slim-buster
+FROM debian:bullseye-slim AS builder
 
 # 设置工作目录
 WORKDIR /app
