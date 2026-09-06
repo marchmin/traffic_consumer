@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   
 env:
-TZ: Asia/Shanghai
+ TZ: Asia/Shanghai
 
 jobs:
   build-executables:
