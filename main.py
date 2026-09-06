@@ -24,7 +24,7 @@ def main():
 
     try:
         from web_ui import app, socketio
-        print("启动 Web UI, 访问 http://127.0.0.1:5001")
+        print("启动 Web UI, 访问 http://0.0.0.0:5001")
         from web_ui import launch_auto_start_configs
         launch_auto_start_configs()
         socketio.run(app, host="0.0.0.0", port=5001, allow_unsafe_werkzeug=True)
