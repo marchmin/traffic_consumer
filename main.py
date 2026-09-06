@@ -30,7 +30,6 @@ def main():
         socketio.run(app, 
                      host='0.0.0.0',  # 允许外部访问
                      port=5001,       # 指定端口
-                     debug=True,      # 开启调试模式
                      allow_unsafe_werkzeug=True)
     except ImportError:
         print("错误: 无法导入web_ui。请确保Flask和Flask-SocketIO已安装。")
