@@ -18,7 +18,7 @@ def main():
         for flag in ["--list-configs", "--delete-config", "--show-stats", "--save-config", "--no-gui"]
     ) or args.no_gui
 
-    if is_cli_mode:
+    #if is_cli_mode:
        # run_cli(args)
        # return
 
