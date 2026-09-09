@@ -19,8 +19,8 @@ def main():
     ) or args.no_gui
 
     if is_cli_mode:
-        run_cli(args)
-        return
+       # run_cli(args)
+       # return
 
     try:
         from web_ui import app, socketio
