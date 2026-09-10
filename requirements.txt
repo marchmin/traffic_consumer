@@ -8,4 +8,3 @@ Flask==2.2.2
 Flask-SocketIO==5.3.3
 Werkzeug==2.2.2
 croniter
-wsgiref==0.1.2
