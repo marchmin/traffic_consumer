@@ -27,12 +27,10 @@ def main():
         print("启动 Web UI, 访问 http://0.0.0.0:5001")
         from web_ui import launch_auto_start_configs
         launch_auto_start_configs()
-        #socketio.run(app, 
-         ##            host='0.0.0.0',  # 允许外部访问
-         #            port=5001,       # 指定端口
-         #            allow_unsafe_werkzeug=True) 
-    httpd = make_server('0.0.0.0', 5001, app)  
-    httpd.serve_forever()
+        socketio.run(app, 
+                     host='0.0.0.0',  # 允许外部访问
+                     port=5001,       # 指定端口
+                     allow_unsafe_werkzeug=True) 
     except ImportError:
         print("错误: 无法导入web_ui。请确保Flask和Flask-SocketIO已安装。")
         print("运行 'pip install Flask Flask-SocketIO' 来安装。")
