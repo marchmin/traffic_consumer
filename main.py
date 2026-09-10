@@ -6,7 +6,7 @@
 import sys
 
 from app.cli import parse_args, run_cli
-from gevent import pywsgi
+from wsgiref.simple_server import make_server
 
 def main():
     """根据参数选择 CLI 或 Web UI 启动方式"""
@@ -31,8 +31,8 @@ def main():
          ##            host='0.0.0.0',  # 允许外部访问
          #            port=5001,       # 指定端口
          #            allow_unsafe_werkzeug=True) 
-    server = pywsgi.WSGIServer(('0.0.0.0', 5001), app)  
-    server.serve_forever()
+    httpd = make_server('0.0.0.0', 5001, app)  
+    httpd.serve_forever()
     except ImportError:
         print("错误: 无法导入web_ui。请确保Flask和Flask-SocketIO已安装。")
         print("运行 'pip install Flask Flask-SocketIO' 来安装。")
